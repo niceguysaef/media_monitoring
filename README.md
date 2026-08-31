@@ -37,6 +37,8 @@ Then restart the FastAPI server. The app discovers available projects with Brand
 
 - `GET /api/projects` synchronizes the authoritative Brand24 project list.
 - `GET /api/projects/{project_id}/briefing?days=7` returns normalized daily metrics and optional intelligence with partial-failure states.
+- `GET /api/projects/{project_id}/mentions` returns a normalized, filterable, cursor-paginated mention feed.
+- `GET /api/reference/mention-categories` returns Brand24's supported source filters.
 - `POST /api/projects` creates a basic Brand24 project and refreshes the project list.
 
 The backend accepts the response-shape differences observed between Brand24's specification and live API, including `data`/`message` envelopes and empty versus populated project-list shapes.

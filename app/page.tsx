@@ -7,6 +7,7 @@ import {
   BrainCircuit,
   CalendarDays,
   ChevronRight,
+  ExternalLink,
   FileSearch,
   Gauge,
   Globe2,
@@ -14,6 +15,7 @@ import {
   Plus,
   Radio,
   RefreshCw,
+  RotateCcw,
   Settings2,
   TrendingUp,
   Users,
@@ -21,7 +23,7 @@ import {
 } from "lucide-react";
 
 type Project = { id: string; name: string };
-type View = "briefing" | "settings";
+type View = "briefing" | "mentions" | "settings";
 type FeatureStatus = "ready" | "empty" | "unavailable";
 
 type DailyMetric = {
@@ -68,7 +70,40 @@ type Briefing = {
   cache?: "hit" | "miss";
 };
 
+type Mention = {
+  id: string;
+  date: string;
+  time: string;
+  title: string | null;
+  content: string | null;
+  source: string | null;
+  sourceUrl: string | null;
+  host: string | null;
+  category: string;
+  sentiment: "positive" | "neutral" | "negative" | "unknown";
+  tags: string[];
+  restricted: boolean;
+  restrictionReason: string | null;
+};
+
+type MentionFilters = {
+  from: string;
+  to: string;
+  sentiment: string;
+  category: string;
+};
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+
+function dateInputValue(daysAgo = 0) {
+  const value = new Date();
+  value.setDate(value.getDate() - daysAgo);
+  return value.toISOString().slice(0, 10);
+}
+
+function initialMentionFilters(): MentionFilters {
+  return { from: dateInputValue(6), to: dateInputValue(), sentiment: "", category: "" };
+}
 
 function compactNumber(value: number) {
   return new Intl.NumberFormat("en", {
@@ -166,6 +201,15 @@ export default function Home() {
   const [excludedWords, setExcludedWords] = useState("");
   const [creating, setCreating] = useState(false);
   const [setupMessage, setSetupMessage] = useState<string | null>(null);
+  const [mentionCategories, setMentionCategories] = useState<string[]>([]);
+  const [mentionDraft, setMentionDraft] = useState<MentionFilters>(initialMentionFilters);
+  const [mentionFilters, setMentionFilters] = useState<MentionFilters>(initialMentionFilters);
+  const [mentions, setMentions] = useState<Mention[]>([]);
+  const [mentionsCursor, setMentionsCursor] = useState<string | null>(null);
+  const [mentionsHasMore, setMentionsHasMore] = useState(false);
+  const [mentionsLoading, setMentionsLoading] = useState(false);
+  const [mentionsLoadingMore, setMentionsLoadingMore] = useState(false);
+  const [mentionsError, setMentionsError] = useState<string | null>(null);
 
   const loadProjects = useCallback(async (refresh = false, preferredProjectId?: string) => {
     setProjectsLoading(true);
@@ -190,6 +234,16 @@ export default function Home() {
   }, []);
 
   useEffect(() => { void loadProjects(true); }, [loadProjects]);
+
+  useEffect(() => {
+    fetch(`${API_BASE_URL}/api/reference/mention-categories`)
+      .then(async (response) => {
+        if (!response.ok) throw new Error(await responseError(response, "Could not load mention categories."));
+        return response.json();
+      })
+      .then((payload) => setMentionCategories(payload.categories ?? []))
+      .catch(() => setMentionCategories([]));
+  }, []);
 
   useEffect(() => {
     if (!selectedProjectId) { setBriefing(null); return; }
@@ -218,6 +272,41 @@ export default function Home() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, []);
 
+  const loadMentions = useCallback(async (append = false, cursor?: string | null) => {
+    if (!selectedProjectId) return;
+    append ? setMentionsLoadingMore(true) : setMentionsLoading(true);
+    setMentionsError(null);
+    try {
+      const params = new URLSearchParams({
+        date_from: mentionFilters.from,
+        date_to: mentionFilters.to,
+        limit: "25",
+      });
+      if (mentionFilters.sentiment) params.set("sentiment", mentionFilters.sentiment);
+      if (mentionFilters.category) params.set("category", mentionFilters.category);
+      if (cursor) params.set("cursor", cursor);
+      const response = await fetch(`${API_BASE_URL}/api/projects/${selectedProjectId}/mentions?${params.toString()}`);
+      if (!response.ok) throw new Error(await responseError(response, `Mentions request failed: ${response.status}`));
+      const payload = await response.json();
+      const nextItems = (payload.items ?? []) as Mention[];
+      setMentions((current) => {
+        if (!append) return nextItems;
+        return Array.from(new Map([...current, ...nextItems].map((item) => [item.id, item])).values());
+      });
+      setMentionsCursor(payload.pagination?.cursor ?? null);
+      setMentionsHasMore(Boolean(payload.pagination?.hasMore));
+    } catch (requestError) {
+      setMentionsError(requestError instanceof Error ? requestError.message : "Could not load mentions.");
+      if (!append) setMentions([]);
+    } finally {
+      append ? setMentionsLoadingMore(false) : setMentionsLoading(false);
+    }
+  }, [mentionFilters, selectedProjectId]);
+
+  useEffect(() => {
+    if (view === "mentions" && selectedProjectId) void loadMentions(false);
+  }, [loadMentions, selectedProjectId, view]);
+
   const selectedProject = projects.find((project) => project.id === selectedProjectId) ?? null;
   const totals = briefing?.metrics.totals;
   const totalEngagement = totals ? totals.engagement.likes + totals.engagement.comments + totals.engagement.shares : 0;
@@ -226,6 +315,23 @@ export default function Home() {
     const total = totals.sentiment.positive + totals.sentiment.neutral + totals.sentiment.negative;
     return total ? (totals.sentiment.negative / total) * 100 : 0;
   }, [totals]);
+
+  function applyMentionFilters(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setMentions([]);
+    setMentionsCursor(null);
+    setMentionsHasMore(false);
+    setMentionFilters({ ...mentionDraft });
+  }
+
+  function resetMentionFilters() {
+    const defaults = initialMentionFilters();
+    setMentionDraft(defaults);
+    setMentions([]);
+    setMentionsCursor(null);
+    setMentionsHasMore(false);
+    setMentionFilters(defaults);
+  }
 
   async function createProject(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -262,7 +368,7 @@ export default function Home() {
         <div className="nav-label">Workspace</div>
         <nav className="main-nav">
           <button className={view === "briefing" ? "active" : ""} onClick={() => setView("briefing")} type="button"><Gauge size={18} /><span>Briefing</span></button>
-          <button disabled type="button"><FileSearch size={18} /><span>Mentions</span><small>Next</small></button>
+          <button className={view === "mentions" ? "active" : ""} onClick={() => setView("mentions")} type="button"><FileSearch size={18} /><span>Mentions</span></button>
           <button disabled type="button"><Globe2 size={18} /><span>Sources</span><small>Soon</small></button>
           <button disabled type="button"><Hash size={18} /><span>Topics</span><small>Soon</small></button>
         </nav>
@@ -276,8 +382,8 @@ export default function Home() {
       <section className="workspace">
         <header className="topbar">
           <div>
-            <p className="eyebrow">{view === "briefing" ? "Intelligence briefing" : "Project administration"}</p>
-            <h1>{view === "briefing" ? selectedProject?.name ?? "Select a project" : "Project settings"}</h1>
+            <p className="eyebrow">{view === "briefing" ? "Intelligence briefing" : view === "mentions" ? "Evidence explorer" : "Project administration"}</p>
+            <h1>{view === "settings" ? "Project settings" : selectedProject?.name ?? "Select a project"}</h1>
           </div>
           <div className="project-toolbar">
             <label className="project-picker"><span>Project</span><select aria-label="Brand24 project" disabled={projectsLoading || !projects.length} value={selectedProjectId} onChange={(event) => setSelectedProjectId(event.target.value)}>
@@ -341,6 +447,57 @@ export default function Home() {
 
             {briefing?.warnings.length ? <div className="warning-strip">Some optional intelligence could not be loaded: {briefing.warnings.map((warning) => warning.feature).join(", ")}.</div> : null}
           </>
+        ) : view === "mentions" ? (
+          <section className="mentions-workspace">
+            <form className="mention-filters" onSubmit={applyMentionFilters}>
+              <div className="filter-heading"><div><p className="eyebrow">Filter evidence</p><h2>Collected mentions</h2></div><button className="reset-button" type="button" onClick={resetMentionFilters}><RotateCcw size={15} /> Reset</button></div>
+              <div className="filter-grid">
+                <label>From<input type="date" max={mentionDraft.to} value={mentionDraft.from} onChange={(event) => setMentionDraft((current) => ({ ...current, from: event.target.value }))} /></label>
+                <label>To<input type="date" min={mentionDraft.from} max={dateInputValue()} value={mentionDraft.to} onChange={(event) => setMentionDraft((current) => ({ ...current, to: event.target.value }))} /></label>
+                <label>Sentiment<select value={mentionDraft.sentiment} onChange={(event) => setMentionDraft((current) => ({ ...current, sentiment: event.target.value }))}><option value="">All sentiment</option><option value="positive">Positive</option><option value="neutral">Neutral</option><option value="negative">Negative</option></select></label>
+                <label>Source<select value={mentionDraft.category} onChange={(event) => setMentionDraft((current) => ({ ...current, category: event.target.value }))}><option value="">All sources</option>{mentionCategories.map((category) => <option value={category} key={category}>{category.replaceAll("_", " ")}</option>)}</select></label>
+                <button className="filter-action" type="submit">Apply filters</button>
+              </div>
+            </form>
+
+            <div className="mention-results-heading">
+              <div><strong>{mentionsLoading ? "Loading mentions…" : `${mentions.length} mention${mentions.length === 1 ? "" : "s"} loaded`}</strong><span>{formatDate(mentionFilters.from)} – {formatDate(mentionFilters.to)}{mentionFilters.sentiment ? ` · ${mentionFilters.sentiment}` : ""}{mentionFilters.category ? ` · ${mentionFilters.category.replaceAll("_", " ")}` : ""}</span></div>
+              <span className="live-pill"><i /> Live Brand24 data</span>
+            </div>
+
+            {mentionsError ? <div className="error-state mention-error">{mentionsError}<button type="button" onClick={() => void loadMentions(false)}>Try again</button></div> : null}
+
+            <div className="mention-list">
+              {mentionsLoading ? Array.from({ length: 5 }, (_, index) => <div className="mention-card" key={index}><Skeleton compact /></div>) : null}
+              {!mentionsLoading && !mentions.length && !mentionsError ? <div className="mention-empty"><FileSearch size={28} /><strong>No mentions matched these filters</strong><p>Try a wider date range or remove a sentiment or source filter.</p></div> : null}
+              {!mentionsLoading ? mentions.map((mention) => (
+                <article className={mention.restricted ? "mention-card restricted" : "mention-card"} key={mention.id}>
+                  <div className="mention-meta">
+                    <span className={`sentiment-badge ${mention.sentiment}`}>{mention.sentiment}</span>
+                    <span className="category-badge">{mention.category}</span>
+                    <time>{formatDate(mention.date)}{mention.time ? ` · ${mention.time}` : ""}</time>
+                  </div>
+                  <div className="mention-body">
+                    <div>
+                      <h3>{mention.title || (mention.restricted ? "Platform-restricted mention" : `${mention.category} mention`)}</h3>
+                      {mention.content ? <p>{mention.content}</p> : mention.restricted ? <p className="restriction-copy">{mention.restrictionReason}</p> : <p className="restriction-copy">No text excerpt was supplied by Brand24.</p>}
+                    </div>
+                    <div className="mention-actions">
+                      {mention.sourceUrl ? <a href={mention.sourceUrl} target="_blank" rel="noreferrer">Open source <ExternalLink size={14} /></a> : null}
+                    </div>
+                  </div>
+                  <footer>
+                    <span><Globe2 size={13} />{mention.host || "Source unavailable"}</span>
+                    {mention.source && !mention.sourceUrl ? <code>{mention.source}</code> : null}
+                    {mention.tags.length ? <div className="mention-tags">{mention.tags.map((tag) => <span key={tag}>{tag}</span>)}</div> : null}
+                  </footer>
+                </article>
+              )) : null}
+            </div>
+
+            {!mentionsLoading && mentionsHasMore ? <button className="load-more" disabled={mentionsLoadingMore || !mentionsCursor} onClick={() => void loadMentions(true, mentionsCursor)} type="button">{mentionsLoadingMore ? "Loading more…" : "Load more mentions"}</button> : null}
+            {!mentionsLoading && mentions.length > 0 && !mentionsHasMore ? <p className="end-of-results">You’ve reached the end of this result set.</p> : null}
+          </section>
         ) : (
           <section className="settings-grid">
             <form className="setup-panel" onSubmit={createProject}>

@@ -6,6 +6,7 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, timedelta
+from hashlib import sha256
 from pathlib import Path
 from time import monotonic, time
 from typing import Any, Callable, Dict, List, Optional, Tuple
@@ -28,6 +29,7 @@ load_dotenv()
 
 RATE_LIMITS = {
     "dashboard": {"limit": 20, "window": 60},
+    "mentions_read": {"limit": 60, "window": 60},
     "monitors_read": {"limit": 30, "window": 60},
     "monitors_create": {"limit": 3, "window": 300},
 }
@@ -35,6 +37,7 @@ RATE_LIMITS = {
 _rate_buckets: Dict[str, List[float]] = {}
 _dashboard_cache: Dict[str, Tuple[float, Dict[str, Any]]] = {}
 _projects_cache: Optional[Tuple[float, List[Dict[str, str]]]] = None
+_categories_cache: Optional[Tuple[float, List[str]]] = None
 
 app = FastAPI(
     title="Media Monitoring Demo API",
@@ -639,6 +642,135 @@ def _live_briefing(project: Dict[str, str], days: int) -> Dict[str, Any]:
     }
 
 
+def _brand24_mention_categories(force_refresh: bool = False) -> List[str]:
+    global _categories_cache
+
+    now = time()
+    if not force_refresh and _categories_cache and now - _categories_cache[0] < 3600:
+        return _categories_cache[1]
+
+    api_key, _ = _brand24_credentials()
+    payload = _envelope_payload(_brand24_get("/api-data/v1/mentions/categories", api_key))
+    raw_categories = payload.get("categories") if isinstance(payload.get("categories"), list) else []
+    categories = sorted({str(category).strip().lower() for category in raw_categories if str(category).strip()})
+    _categories_cache = (now, categories)
+    return categories
+
+
+def _parse_date_parameter(value: Optional[str], name: str) -> Optional[date]:
+    if value is None:
+        return None
+    try:
+        return date.fromisoformat(value)
+    except ValueError:
+        raise HTTPException(status_code=400, detail=f"{name} must use YYYY-MM-DD format.")
+
+
+def _normalize_mention(item: Dict[str, Any]) -> Dict[str, Any]:
+    published_date = str(item.get("date") or "")
+    published_time = str(item.get("time") or "")
+    title = str(item["title"]).strip() if item.get("title") else ""
+    content = str(item["content"]).strip() if item.get("content") else ""
+    source = str(item["source"]).strip() if item.get("source") else ""
+    host = str(item["host"]).strip() if item.get("host") else ""
+    category = str(item["category"]).strip() if item.get("category") else "Unknown"
+    category_token = category.casefold()
+
+    raw_sentiment = item.get("sentiment")
+    sentiment = {-1: "negative", 0: "neutral", 1: "positive"}.get(raw_sentiment)
+    if sentiment is None and isinstance(raw_sentiment, str) and raw_sentiment.casefold() in {"positive", "neutral", "negative"}:
+        sentiment = raw_sentiment.casefold()
+    sentiment = sentiment or "unknown"
+
+    source_url = source if source.startswith(("https://", "http://")) else None
+    restricted_platform = category_token in {"facebook", "instagram", "x", "x (twitter)", "twitter"}
+    restricted = restricted_platform and not (title or content)
+    if restricted:
+        if "x" in category_token or "twitter" in category_token:
+            restriction_reason = "Post text is unavailable through the API for X/Twitter mentions."
+        else:
+            restriction_reason = f"Post text and source links are unavailable through the API for {category}."
+    else:
+        restriction_reason = None
+
+    raw_tags = item.get("tags") if isinstance(item.get("tags"), list) else []
+    tags = [str(tag) for tag in raw_tags if str(tag).strip()]
+    identity = "|".join((published_date, published_time, source, host, title, content[:80]))
+    return {
+        "id": sha256(identity.encode("utf-8")).hexdigest()[:20],
+        "date": published_date,
+        "time": published_time,
+        "title": title or None,
+        "content": content or None,
+        "source": source or None,
+        "sourceUrl": source_url,
+        "host": host or None,
+        "category": category,
+        "sentiment": sentiment,
+        "tags": tags,
+        "restricted": restricted,
+        "restrictionReason": restriction_reason,
+    }
+
+
+def _live_mentions(
+    project: Dict[str, str],
+    date_from: date,
+    date_to: date,
+    limit: int,
+    cursor: Optional[str],
+    sentiment: Optional[str],
+    category: Optional[str],
+) -> Dict[str, Any]:
+    api_key, _ = _brand24_credentials()
+    query: Dict[str, Any] = {
+        "date_from": date_from.isoformat(),
+        "date_to": date_to.isoformat(),
+        "limit": limit,
+    }
+    if sentiment:
+        query["sentiment"] = sentiment
+    if category:
+        query["category"] = category
+
+    raw_results: List[Dict[str, Any]] = []
+    next_cursor = cursor
+    has_more = False
+    seen_cursors = {cursor} if cursor else set()
+    # Brand24 may apply filters after forming an internal page, yielding an empty
+    # result with has_more_mentions=true. Advance through a bounded number of
+    # sparse pages so one app-level page contains useful filtered evidence.
+    for _ in range(8):
+        page_query = {**query}
+        if next_cursor:
+            page_query["cursor"] = next_cursor
+        payload = _envelope_payload(
+            _brand24_get(f"/api-data/v1/project/{project['id']}/mentions", api_key, page_query)
+        )
+        page_results = payload.get("results") if isinstance(payload.get("results"), list) else []
+        raw_results.extend(item for item in page_results if isinstance(item, dict))
+        has_more = bool(payload.get("has_more_mentions"))
+        candidate_cursor = str(payload["cursor"]) if payload.get("cursor") else None
+        if len(raw_results) >= limit or not has_more or not candidate_cursor or candidate_cursor in seen_cursors:
+            next_cursor = candidate_cursor
+            break
+        seen_cursors.add(candidate_cursor)
+        next_cursor = candidate_cursor
+
+    normalized_items = [_normalize_mention(item) for item in raw_results]
+    deduplicated_items = list({item["id"]: item for item in normalized_items}.values())
+    return {
+        "project": project,
+        "dateRange": {"from": date_from.isoformat(), "to": date_to.isoformat()},
+        "filters": {"sentiment": sentiment, "category": category},
+        "items": deduplicated_items,
+        "pagination": {
+            "hasMore": has_more,
+            "cursor": next_cursor,
+        },
+    }
+
+
 def _live_dashboard(project_id: str, api_key: str, brand: str, days: int) -> Dict[str, Any]:
     dates = _date_range(days)
     params = {"date_from": dates[0], "date_to": dates[-1]}
@@ -771,6 +903,54 @@ def project_briefing(
     return _cached_dashboard(
         f"briefing:{project_id}:{days}",
         lambda: _live_briefing(project, days),
+    )
+
+
+@app.get("/api/reference/mention-categories")
+def mention_categories(request: Request) -> Dict[str, Any]:
+    _check_rate_limit("monitors_read", _client_id(request))
+    return {"categories": _brand24_mention_categories()}
+
+
+@app.get("/api/projects/{project_id}/mentions")
+def project_mentions(
+    project_id: str,
+    request: Request,
+    date_from: Optional[str] = Query(None),
+    date_to: Optional[str] = Query(None),
+    limit: int = Query(25, ge=1, le=100),
+    cursor: Optional[str] = Query(None, max_length=2048),
+    sentiment: Optional[str] = Query(None),
+    category: Optional[str] = Query(None),
+) -> Dict[str, Any]:
+    _check_rate_limit("mentions_read", _client_id(request))
+    project = next((item for item in _brand24_projects() if item["id"] == project_id), None)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project is not available in the connected Brand24 account.")
+
+    parsed_to = _parse_date_parameter(date_to, "date_to") or date.today()
+    parsed_from = _parse_date_parameter(date_from, "date_from") or (parsed_to - timedelta(days=6))
+    if parsed_to < parsed_from:
+        raise HTTPException(status_code=400, detail="date_to must be equal to or after date_from.")
+    if (parsed_to - parsed_from).days > 30:
+        raise HTTPException(status_code=400, detail="Mention explorer date ranges cannot exceed 31 days.")
+
+    normalized_sentiment = sentiment.casefold().strip() if sentiment else None
+    if normalized_sentiment and normalized_sentiment not in {"positive", "neutral", "negative"}:
+        raise HTTPException(status_code=400, detail="sentiment must be positive, neutral, or negative.")
+
+    normalized_category = category.casefold().strip() if category else None
+    if normalized_category and normalized_category not in _brand24_mention_categories():
+        raise HTTPException(status_code=400, detail="category is not supported by Brand24.")
+
+    return _live_mentions(
+        project=project,
+        date_from=parsed_from,
+        date_to=parsed_to,
+        limit=limit,
+        cursor=cursor,
+        sentiment=normalized_sentiment,
+        category=normalized_category,
     )
 
 

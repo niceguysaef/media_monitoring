@@ -8,6 +8,7 @@
 venv/
 __pycache__/
 *.pyc
+data/request_limits.sqlite3*
 
 # Next.js / Node
 node_modules/

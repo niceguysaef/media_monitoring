@@ -1,0 +1,240 @@
+{"kind":"deck","id":"pr/71we4g","name":"Deck"}
+{"kind":"layout","layoutId":"74639bc1-dd9d-4a3a-83b5-119bea05c443","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"8b9f21bc-92be-479a-9e56-2ce6929d76f0","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/zbh24x","slide":1,"title":"MEDIA INTELLIGENCE","textShapes":7}
+{"kind":"shape","id":"sh/4bup0zqp","slide":1,"bbox":[0,0,790,720]}
+{"kind":"shape","id":"sh/3al8rup4","slide":1,"bbox":[790,0,490,720]}
+{"kind":"textbox","id":"sh/i9c7yp8j","slide":1,"text":"MEDIA INTELLIGENCE","textPreview":"MEDIA INTELLIGENCE","textChars":18,"textLines":1,"bbox":[68,76,500,30]}
+{"kind":"textbox","id":"sh/d0nqx476","slide":1,"name":"cover-title","text":"PoliticsTest Media Intelligence","textPreview":"PoliticsTest Media Intelligence","textChars":31,"textLines":1,"bbox":[68,160,650,180]}
+{"kind":"textbox","id":"sh/szup4zql","slide":1,"text":"PoliticsTest","textPreview":"PoliticsTest","textChars":12,"textLines":1,"bbox":[68,374,600,46]}
+{"kind":"textbox","id":"sh/ryl8vup0","slide":1,"text":"2026-08-27  –  2026-09-02","textPreview":"2026-08-27  –  2026-09-02","textChars":25,"textLines":1,"bbox":[68,438,460,32]}
+{"kind":"textbox","id":"sh/qxc7298f","slide":1,"text":"Client Review","textPreview":"Client Review","textChars":13,"textLines":1,"bbox":[850,246,330,100]}
+{"kind":"textbox","id":"sh/t4j6lkr2","slide":1,"text":"Live monitoring snapshot","textPreview":"Live monitoring snapshot","textChars":24,"textLines":1,"bbox":[850,370,330,34]}
+{"kind":"textbox","id":"sh/83apsfqh","slide":1,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[850,628,330,30]}
+{"kind":"notes","id":"nt/zbh24x","slide":1,"text":""}
+{"kind":"slide","id":"sl/7f9zt9","slide":2,"title":"EXECUTIVE OVERVIEW","textShapes":19}
+{"kind":"shape","id":"sh/xc7a1srq","slide":2,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/a9grqd8f","slide":2,"text":"EXECUTIVE OVERVIEW","textPreview":"EXECUTIVE OVERVIEW","textChars":18,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/bapszi90","slide":2,"name":"slide-2-title","text":"The conversation at a glance","textPreview":"The conversation at a glance","textChars":28,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/kfi9w7qh","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/lgra5sr2","slide":2,"text":"MENTIONS","textPreview":"MENTIONS","textChars":8,"textLines":1,"bbox":[70,170,250,24]}
+{"kind":"textbox","id":"sh/ydgrux8b","slide":2,"text":"1,035","textPreview":"1,035","textChars":5,"textLines":1,"bbox":[70,204,250,58]}
+{"kind":"textbox","id":"sh/ze9s329w","slide":2,"text":"Across the reporting period","textPreview":"Across the reporting period","textChars":27,"textLines":1,"bbox":[70,270,250,42]}
+{"kind":"textbox","id":"sh/0je9k3qd","slide":2,"text":"ESTIMATED REACH","textPreview":"ESTIMATED REACH","textChars":15,"textLines":1,"bbox":[360,170,250,24]}
+{"kind":"textbox","id":"sh/1knat8ri","slide":2,"text":"6.8M","textPreview":"6.8M","textChars":4,"textLines":1,"bbox":[360,204,250,58]}
+{"kind":"textbox","id":"sh/p4b25cze","slide":2,"text":"Potential audience exposure","textPreview":"Potential audience exposure","textChars":27,"textLines":1,"bbox":[360,270,250,42]}
+{"kind":"textbox","id":"sh/o32lw7it","slide":2,"text":"ENGAGEMENT","textPreview":"ENGAGEMENT","textChars":10,"textLines":1,"bbox":[650,170,250,24]}
+{"kind":"textbox","id":"sh/32tk32h8","slide":2,"text":"173.4K","textPreview":"173.4K","textChars":6,"textLines":1,"bbox":[650,204,250,58]}
+{"kind":"textbox","id":"sh/21k3uh03","slide":2,"text":"Likes, comments and shares","textPreview":"Likes, comments and shares","textChars":26,"textLines":1,"bbox":[650,270,250,42]}
+{"kind":"textbox","id":"sh/d8vm9wzq","slide":2,"text":"PEAK DAY","textPreview":"PEAK DAY","textChars":8,"textLines":1,"bbox":[940,170,250,24]}
+{"kind":"textbox","id":"sh/c7ml0ri5","slide":2,"text":"Aug 31","textPreview":"Aug 31","textChars":6,"textLines":1,"bbox":[940,204,250,58]}
+{"kind":"textbox","id":"sh/b6t47mhk","slide":2,"text":"Highest daily engagement","textPreview":"Highest daily engagement","textChars":24,"textLines":1,"bbox":[940,270,250,42]}
+{"kind":"shape","id":"sh/q5k3yh0z","slide":2,"bbox":[70,360,1140,220]}
+{"kind":"textbox","id":"sh/lwvmdwzm","slide":2,"text":"What stands out","textPreview":"What stands out","textChars":15,"textLines":1,"bbox":[100,390,300,34]}
+{"kind":"textbox","id":"sh/0vml4ri1","slide":2,"text":"Neutral sentiment accounts for 70.0% of classified mentions. youtube leads source volume with 509 mentions.","textPreview":"Neutral sentiment accounts for 70.0% of classified mentions. youtube leads source volume with 509 mentions.","textChars":107,"textLines":1,"bbox":[100,444,1030,92]}
+{"kind":"shape","id":"sh/krexwzap","slide":2,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/5cnep4bu","slide":2,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/ipwfupsj","slide":2,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"notes","id":"nt/7f9zt9","slide":2,"text":""}
+{"kind":"slide","id":"sl/gpeeh6","slide":3,"title":"DAILY TIMELINE","textShapes":7}
+{"kind":"shape","id":"sh/nitwvad4","slide":3,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/oj2xofup","slide":3,"text":"DAILY TIMELINE","textPreview":"DAILY TIMELINE","textChars":14,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/pkvexkva","slide":3,"name":"slide-3-title","text":"Attention moved through distinct daily peaks","textPreview":"Attention moved through distinct daily peaks","textChars":44,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/al4fq5cv","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/bmdwzadg","slide":3,"text":"Mentions","textPreview":"Mentions","textChars":8,"textLines":1,"bbox":[70,150,300,34]}
+{"kind":"textbox","id":"sh/cnmxsfu1","slide":3,"text":"Engagement","textPreview":"Engagement","textChars":10,"textLines":1,"bbox":[660,150,300,34]}
+{"kind":"shape","id":"sh/rq9wnqdc","slide":3,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/f2tsbidg","slide":3,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/u1kridwv","slide":3,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"chart","id":"ch/9cnyd8zq","slide":3,"name":"","chartType":"line","bbox":[70,195,530,365]}
+{"kind":"chart","id":"ch/2dsfq90v","slide":3,"name":"","chartType":"line","bbox":[660,195,550,365]}
+{"kind":"notes","id":"nt/gpeeh6","slide":3,"text":""}
+{"kind":"slide","id":"sl/zj5483","slide":4,"title":"SOURCE PERFORMANCE","textShapes":9}
+{"kind":"shape","id":"sh/mt832lov","slide":4,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/9wzmdg7m","slide":4,"text":"SOURCE PERFORMANCE","textPreview":"SOURCE PERFORMANCE","textChars":18,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/8vq54v61","slide":4,"name":"slide-4-title","text":"A small group of sources drove most visibility","textPreview":"A small group of sources drove most visibility","textChars":46,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/z6x476pk","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/lsfm9g7q","slide":4,"text":"Leading source","textPreview":"Leading source","textChars":14,"textLines":1,"bbox":[890,200,280,28]}
+{"kind":"textbox","id":"sh/076l0b65","slide":4,"text":"youtube","textPreview":"youtube","textChars":7,"textLines":1,"bbox":[890,245,280,70]}
+{"kind":"textbox","id":"sh/j214japo","slide":4,"text":"509 mentions\n2.2M estimated reach","textPreview":"509 mentions | 2.2M estimated reach","textChars":33,"textLines":2,"bbox":[890,335,280,90]}
+{"kind":"textbox","id":"sh/i1sna5o3","slide":4,"text":"Source reach is aggregated; it is not a unique-audience count.","textPreview":"Source reach is aggregated; it is not a unique-audience count.","textChars":62,"textLines":1,"bbox":[890,470,280,80]}
+{"kind":"shape","id":"sh/sjqh8z29","slide":4,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/tkzy143e","slide":4,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/6x8z69k3","slide":4,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"chart","id":"ch/alkf6xgv","slide":4,"name":"","chartType":"bar","bbox":[70,158,760,450]}
+{"kind":"notes","id":"nt/zj5483","slide":4,"text":""}
+{"kind":"slide","id":"sl/f4zvhr","slide":5,"title":"SENTIMENT","textShapes":17}
+{"kind":"shape","id":"sh/a5sv2x47","slide":5,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/x8judsny","slide":5,"text":"SENTIMENT","textPreview":"SENTIMENT","textChars":9,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/w7ad47md","slide":5,"name":"slide-5-title","text":"Neutral sentiment formed the largest share","textPreview":"Neutral sentiment formed the largest share","textChars":42,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/n21c7i5w","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/mh8vyd4b","slide":5,"text":"70.0%","textPreview":"70.0%","textChars":5,"textLines":1,"bbox":[90,190,540,100]}
+{"kind":"textbox","id":"sh/94ju9sn2","slide":5,"text":"Neutral share of classified mentions","textPreview":"Neutral share of classified mentions","textChars":36,"textLines":1,"bbox":[110,295,500,42]}
+{"kind":"shape","id":"sh/83ad0nmh","slide":5,"bbox":[105,375,34.78,54]}
+{"kind":"shape","id":"sh/rylwjml0","slide":5,"bbox":[139.78,375,350.24,54]}
+{"kind":"shape","id":"sh/6dcvah4f","slide":5,"bbox":[490.02,375,114.98,54]}
+{"kind":"textbox","id":"sh/k3ulkzip","slide":5,"text":"Share of classified mentions","textPreview":"Share of classified mentions","textChars":28,"textLines":1,"bbox":[105,452,500,28]}
+{"kind":"shape","id":"sh/l43md4za","slide":5,"bbox":[760,195,8,76]}
+{"kind":"textbox","id":"sh/yhc3i90z","slide":5,"text":"Positive","textPreview":"Positive","textChars":8,"textLines":1,"bbox":[790,195,220,30]}
+{"kind":"textbox","id":"sh/jil4beh4","slide":5,"text":"7.0%","textPreview":"7.0%","textChars":4,"textLines":1,"bbox":[1030,190,150,38]}
+{"kind":"textbox","id":"sh/wfulgzit","slide":5,"text":"72 mentions","textPreview":"72 mentions","textChars":11,"textLines":1,"bbox":[790,236,390,26]}
+{"kind":"shape","id":"sh/xg3m94ze","slide":5,"bbox":[760,315,8,76]}
+{"kind":"textbox","id":"sh/ads3ep0n","slide":5,"text":"Neutral","textPreview":"Neutral","textChars":7,"textLines":1,"bbox":[790,315,220,30]}
+{"kind":"textbox","id":"sh/bel47uh8","slide":5,"text":"70.0%","textPreview":"70.0%","textChars":5,"textLines":1,"bbox":[1030,310,150,38]}
+{"kind":"textbox","id":"sh/obalcfih","slide":5,"text":"725 mentions","textPreview":"725 mentions","textChars":12,"textLines":1,"bbox":[790,356,390,26]}
+{"kind":"shape","id":"sh/9cjm5kj2","slide":5,"bbox":[760,435,8,76]}
+{"kind":"textbox","id":"sh/p8b29gb6","slide":5,"text":"Negative","textPreview":"Negative","textChars":8,"textLines":1,"bbox":[790,435,220,30]}
+{"kind":"textbox","id":"sh/o7210bal","slide":5,"text":"23.0%","textPreview":"23.0%","textChars":5,"textLines":1,"bbox":[1030,430,150,38]}
+{"kind":"textbox","id":"sh/36tk76t0","slide":5,"text":"238 mentions","textPreview":"238 mentions","textChars":12,"textLines":1,"bbox":[790,476,390,26]}
+{"kind":"shape","id":"sh/25kjy1sf","slide":5,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/h4b25gbu","slide":5,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/g321wba9","slide":5,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"notes","id":"nt/f4zvhr","slide":5,"text":""}
+{"kind":"slide","id":"sl/jneioj","slide":6,"title":"TOPICS AND SHARE OF VOICE","textShapes":14}
+{"kind":"shape","id":"sh/3y9cre9s","slide":6,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/4zit0jqx","slide":6,"text":"TOPICS AND SHARE OF VOICE","textPreview":"TOPICS AND SHARE OF VOICE","textChars":25,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/5krut4ri","slide":6,"name":"slide-6-title","text":"The leading themes reveal where attention clustered","textPreview":"The leading themes reveal where attention clustered","textChars":51,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/ql0b2983","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/sn2t4jq9","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[785,175,40,40]}
+{"kind":"textbox","id":"sh/dobuxoru","slide":6,"text":"Malaysian Political Social Posts","textPreview":"Malaysian Political Social Posts","textChars":32,"textLines":1,"bbox":[845,175,360,34]}
+{"kind":"textbox","id":"sh/epkv6t8f","slide":6,"text":"Miscellaneous social media posts mixing Malaysian political hashtags, community events, and unrelated trending topics.","textPreview":"Miscellaneous social media posts mixing Malaysian political hashtags, community events, and unrelated trending topics.","textChars":118,"textLines":1,"bbox":[845,217,360,74]}
+{"kind":"textbox","id":"sh/fqtczypk","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[785,313,40,40]}
+{"kind":"textbox","id":"sh/ba9k7yxw","slide":6,"text":"Malaysian Political Landscape","textPreview":"Malaysian Political Landscape","textChars":29,"textLines":1,"bbox":[845,313,360,34]}
+{"kind":"textbox","id":"sh/q90jytgb","slide":6,"text":"Analysis and commentary on Malaysian political parties, elections, and the broader political landscape involving BN, PH, and PN.","textPreview":"Analysis and commentary on Malaysian political parties, elections, and the broader political landscape involving BN, PH, and PN.","textChars":128,"textLines":1,"bbox":[845,355,360,74]}
+{"kind":"textbox","id":"sh/dcb298f2","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[785,451,40,40]}
+{"kind":"textbox","id":"sh/cb2103yh","slide":6,"text":"Tabung Haji RCI Scandal","textPreview":"Tabung Haji RCI Scandal","textChars":23,"textLines":1,"bbox":[845,451,360,34]}
+{"kind":"textbox","id":"sh/3m9k3ex0","slide":6,"text":"Public reactions and debates surrounding the Royal Commission of Inquiry into Tabung Haji and related corruption allegations.","textPreview":"Public reactions and debates surrounding the Royal Commission of Inquiry into Tabung Haji and related corruption allegations.","textChars":125,"textLines":1,"bbox":[845,493,360,74]}
+{"kind":"shape","id":"sh/2l0jutgf","slide":6,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/por25ofq","slide":6,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/oni1wjyl","slide":6,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"chart","id":"ch/fmxkjypw","slide":6,"name":"","chartType":"bar","bbox":[70,160,660,430]}
+{"kind":"notes","id":"nt/jneioj","slide":6,"text":""}
+{"kind":"slide","id":"sl/jrkysc","slide":7,"title":"WHO AND WHERE","textShapes":43}
+{"kind":"shape","id":"sh/sbyt8fmd","slide":7,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/rapczals","slide":7,"text":"WHO AND WHERE","textPreview":"WHO AND WHERE","textChars":13,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/69gb6547","slide":7,"name":"slide-7-title","text":"Visibility came from both publishers and influential voices","textPreview":"Visibility came from both publishers and influential voices","textChars":59,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/587ax03m","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/47yt4vm1","slide":7,"text":"Leading domains","textPreview":"Leading domains","textChars":15,"textLines":1,"bbox":[70,155,500,40]}
+{"kind":"textbox","id":"sh/j6psvqlg","slide":7,"text":"Influential authors","textPreview":"Influential authors","textChars":19,"textLines":1,"bbox":[680,155,500,40]}
+{"kind":"textbox","id":"sh/i5gb2l4v","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[70,220,36,28]}
+{"kind":"textbox","id":"sh/p4bu943q","slide":7,"text":"youtube.com","textPreview":"youtube.com","textChars":11,"textLines":1,"bbox":[120,220,300,28]}
+{"kind":"textbox","id":"sh/o3itgz25","slide":7,"text":"509 mentions  •  2.2M reach","textPreview":"509 mentions  •  2.2M reach","textChars":27,"textLines":1,"bbox":[120,250,440,24]}
+{"kind":"textbox","id":"sh/upoz6pon","slide":7,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[70,285,36,28]}
+{"kind":"textbox","id":"sh/vqxgfup8","slide":7,"text":"x.com","textPreview":"x.com","textChars":5,"textLines":1,"bbox":[120,285,300,28]}
+{"kind":"textbox","id":"sh/wr6h8z6d","slide":7,"text":"172 mentions  •  564K reach","textPreview":"172 mentions  •  564K reach","textChars":27,"textLines":1,"bbox":[120,315,440,24]}
+{"kind":"textbox","id":"sh/hsfyh47y","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[70,350,36,28]}
+{"kind":"textbox","id":"sh/ml4f25ob","slide":7,"text":"tiktok.com","textPreview":"tiktok.com","textChars":10,"textLines":1,"bbox":[120,350,300,28]}
+{"kind":"textbox","id":"sh/7mxgbapw","slide":7,"text":"143 mentions  •  2.9M reach","textPreview":"143 mentions  •  2.9M reach","textChars":27,"textLines":1,"bbox":[120,380,440,24]}
+{"kind":"textbox","id":"sh/8n6h4f6h","slide":7,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[70,415,36,28]}
+{"kind":"textbox","id":"sh/9ofydk72","slide":7,"text":"t.me","textPreview":"t.me","textChars":4,"textLines":1,"bbox":[120,415,300,28]}
+{"kind":"textbox","id":"sh/6h8ze9ov","slide":7,"text":"35 mentions  •  525K reach","textPreview":"35 mentions  •  525K reach","textChars":26,"textLines":1,"bbox":[120,445,440,24]}
+{"kind":"textbox","id":"sh/rihgne50","slide":7,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[70,480,36,28]}
+{"kind":"textbox","id":"sh/n29wf65s","slide":7,"text":"umno-online.my","textPreview":"umno-online.my","textChars":14,"textLines":1,"bbox":[120,480,300,28]}
+{"kind":"textbox","id":"sh/210v6147","slide":7,"text":"21 mentions  •  50.4K reach","textPreview":"21 mentions  •  50.4K reach","textChars":27,"textLines":1,"bbox":[120,510,440,24]}
+{"kind":"textbox","id":"sh/p4behgni","slide":7,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[70,545,36,28]}
+{"kind":"textbox","id":"sh/o32d8bmd","slide":7,"text":"bsky.app","textPreview":"bsky.app","textChars":8,"textLines":1,"bbox":[120,545,300,28]}
+{"kind":"textbox","id":"sh/b6twj65o","slide":7,"text":"20 mentions  •  220 reach","textPreview":"20 mentions  •  220 reach","textChars":25,"textLines":1,"bbox":[120,575,440,24]}
+{"kind":"textbox","id":"sh/a5kva143","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[680,220,36,28]}
+{"kind":"textbox","id":"sh/xsbelgnu","slide":7,"text":"grok","textPreview":"grok","textChars":4,"textLines":1,"bbox":[730,220,300,28]}
+{"kind":"textbox","id":"sh/cr2dcbm9","slide":7,"text":"9M followers  •  0 reach","textPreview":"9M followers  •  0 reach","textChars":24,"textLines":1,"bbox":[730,250,440,24]}
+{"kind":"textbox","id":"sh/zutwnq50","slide":7,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[680,285,36,28]}
+{"kind":"textbox","id":"sh/ytkvel4f","slide":7,"text":"buletintv3","textPreview":"buletintv3","textChars":10,"textLines":1,"bbox":[730,285,300,28]}
+{"kind":"textbox","id":"sh/wzmd4v2d","slide":7,"text":"3.9M followers  •  25.6K reach","textPreview":"3.9M followers  •  25.6K reach","textChars":30,"textLines":1,"bbox":[730,315,440,24]}
+{"kind":"textbox","id":"sh/h0vux0jy","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[680,350,36,28]}
+{"kind":"textbox","id":"sh/ux4v2lkn","slide":7,"text":"malaysiagazette","textPreview":"malaysiagazette","textChars":15,"textLines":1,"bbox":[730,350,300,28]}
+{"kind":"textbox","id":"sh/vydcvq1s","slide":7,"text":"2.7M followers  •  41.8K reach","textPreview":"2.7M followers  •  41.8K reach","textChars":30,"textLines":1,"bbox":[730,380,440,24]}
+{"kind":"textbox","id":"sh/8vmd0b2h","slide":7,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[680,415,36,28]}
+{"kind":"textbox","id":"sh/9wvutgj2","slide":7,"text":"KiniTV","textPreview":"KiniTV","textChars":6,"textLines":1,"bbox":[730,415,300,28]}
+{"kind":"textbox","id":"sh/mtkvylkb","slide":7,"text":"2.5M followers  •  14.1K reach","textPreview":"2.5M followers  •  14.1K reach","textChars":30,"textLines":1,"bbox":[730,445,440,24]}
+{"kind":"textbox","id":"sh/7udcrq1w","slide":7,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[680,480,36,28]}
+{"kind":"textbox","id":"sh/k72twb25","slide":7,"text":"Buletin TV3","textPreview":"Buletin TV3","textChars":11,"textLines":1,"bbox":[730,480,300,28]}
+{"kind":"textbox","id":"sh/l8bupgjq","slide":7,"text":"2.3M followers  •  22.9K reach","textPreview":"2.3M followers  •  22.9K reach","textChars":30,"textLines":1,"bbox":[730,510,440,24]}
+{"kind":"textbox","id":"sh/p07ih8v6","slide":7,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[680,545,36,28]}
+{"kind":"textbox","id":"sh/ozy183e1","slide":7,"text":"Astro AWANI","textPreview":"Astro AWANI","textChars":11,"textLines":1,"bbox":[730,545,300,28]}
+{"kind":"textbox","id":"sh/3yp0fidg","slide":7,"text":"2.1M followers  •  27.8K reach","textPreview":"2.1M followers  •  27.8K reach","textChars":30,"textLines":1,"bbox":[730,575,440,24]}
+{"kind":"shape","id":"sh/2xwj6dwv","slide":7,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/do7ilsvi","slide":7,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/c3y1cnex","slide":7,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"notes","id":"nt/jrkysc","slide":7,"text":""}
+{"kind":"slide","id":"sl/0hoy81","slide":8,"title":"FEATURED COVERAGE","textShapes":17}
+{"kind":"shape","id":"sh/jq5k7alk","slide":8,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/kre10fmp","slide":8,"text":"FEATURED COVERAGE","textPreview":"FEATURED COVERAGE","textChars":17,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/lcn29k3a","slide":8,"name":"slide-8-title","text":"Representative mentions capture how coverage was framed","textPreview":"Representative mentions capture how coverage was framed","textChars":55,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/6dwj2p4v","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"shape","id":"sh/7e5kbulg","slide":8,"bbox":[64,165,360,430]}
+{"kind":"textbox","id":"sh/8fe14zm1","slide":8,"text":"tiktok  •  negative","textPreview":"tiktok  •  negative","textChars":19,"textLines":1,"bbox":[88,192,312,28]}
+{"kind":"textbox","id":"sh/tgn2d43m","slide":8,"text":"faizalothman44","textPreview":"faizalothman44","textChars":14,"textLines":1,"bbox":[88,240,312,92]}
+{"kind":"textbox","id":"sh/mhsjql4r","slide":8,"text":"semua PM dari UMNO BN curi wang rakyat.. lepas pru16 ada xpm? hahaha takut xpm tu kekal jadi PM11 pulak.. meroyan pulak dia botak tua ni","textPreview":"semua PM dari UMNO BN curi wang rakyat.. lepas pru16 ada xpm? hahaha takut xpm tu kekal jadi PM11 pulak.. meroyan pulak dia botak tua ni","textChars":136,"textLines":1,"bbox":[88,350,312,150]}
+{"kind":"textbox","id":"sh/nil0zqlc","slide":8,"text":"tiktok.com\n2026-08-27","textPreview":"tiktok.com | 2026-08-27","textChars":21,"textLines":2,"bbox":[88,525,312,48]}
+{"kind":"shape","id":"sh/3yxwfm1w","slide":8,"bbox":[464,165,360,430]}
+{"kind":"textbox","id":"sh/ix4v6hkb","slide":8,"text":"news  •  positive","textPreview":"news  •  positive","textChars":17,"textLines":1,"bbox":[488,192,312,28]}
+{"kind":"textbox","id":"sh/50fehwjm","slide":8,"text":"77 Tahun Wanita UMNO: Teguh Berkhidmat, Terus Mewarisi – Wan Mohalina","textPreview":"77 Tahun Wanita UMNO: Teguh Berkhidmat, Terus Mewarisi – Wan Mohalina","textChars":69,"textLines":1,"bbox":[488,240,312,92]}
+{"kind":"textbox","id":"sh/4z6d8r21","slide":8,"text":"KUALA LUMPUR, 26 Ogos – Wanita UMNO sudah 77 tahun membuktikan kekuatan perjuangan, kesetiaan, keberanian dan kesungguhan untuk terus turun padang bersama rakyat, kata Exco Wanita UMNO, Wan Mohalina Wan Mohamad. Beliau yang lebih dikenali sebagai Kak","textPreview":"KUALA LUMPUR, 26 Ogos – Wanita UMNO sudah 77 tahun membuktikan kekuatan perjuangan, kesetiaan, keberanian dan kesungguhan untuk terus tur...","textChars":250,"textLines":1,"bbox":[488,350,312,150]}
+{"kind":"textbox","id":"sh/vudcb2lk","slide":8,"text":"umno-online.my\n2026-08-27","textPreview":"umno-online.my | 2026-08-27","textChars":25,"textLines":2,"bbox":[488,525,312,48]}
+{"kind":"shape","id":"sh/ut4v2hkz","slide":8,"bbox":[864,165,360,430]}
+{"kind":"textbox","id":"sh/hwvedc3q","slide":8,"text":"news  •  neutral","textPreview":"news  •  neutral","textChars":16,"textLines":1,"bbox":[888,192,312,28]}
+{"kind":"textbox","id":"sh/gvmd4725","slide":8,"text":"BN-PH Hampir Bahagi Kerusi Di PRN Melaka, Tiba-Tiba Rundingan Didakwa Bakal Tak Jadi","textPreview":"BN-PH Hampir Bahagi Kerusi Di PRN Melaka, Tiba-Tiba Rundingan Didakwa Bakal Tak Jadi","textChars":84,"textLines":1,"bbox":[888,240,312,92]}
+{"kind":"textbox","id":"sh/76tc72lo","slide":8,"text":"KUALA LUMPUR: Rundingan kerjasama antara Barisan Nasional (BN) dan Pakatan Harapan (PH) bagi menghadapi Pilihan Raya Negeri (PRN) Melaka dipercayai berdepan ketidakpastian susulan perkembangan terbaharu membabitkan beberapa pemimpin UMNO. Ketua UMNO","textPreview":"KUALA LUMPUR: Rundingan kerjasama antara Barisan Nasional (BN) dan Pakatan Harapan (PH) bagi menghadapi Pilihan Raya Negeri (PRN) Melaka ...","textChars":249,"textLines":1,"bbox":[888,350,312,150]}
+{"kind":"textbox","id":"sh/65kvyxk3","slide":8,"text":"demirakyatchannel.my\n2026-08-27","textPreview":"demirakyatchannel.my | 2026-08-27","textChars":31,"textLines":2,"bbox":[888,525,312,48]}
+{"kind":"shape","id":"sh/a1kvax4v","slide":8,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/b2twj25g","slide":8,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/w32xc7m1","slide":8,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"notes","id":"nt/0hoy81","slide":8,"text":""}
+{"kind":"slide","id":"sl/g7xx1c","slide":9,"title":"CONVERSATION SIGNALS","textShapes":35}
+{"kind":"shape","id":"sh/c76tg7al","slide":9,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/rmxc72t0","slide":9,"text":"CONVERSATION SIGNALS","textPreview":"CONVERSATION SIGNALS","textChars":20,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/qlobexsf","slide":9,"name":"slide-9-title","text":"Shared links and hashtags reveal the conversation signals","textPreview":"Shared links and hashtags reveal the conversation signals","textChars":57,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/pkfu5sbu","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/4j6tcnap","slide":9,"text":"Trending links","textPreview":"Trending links","textChars":14,"textLines":1,"bbox":[70,155,520,40]}
+{"kind":"textbox","id":"sh/3ixc32t4","slide":9,"text":"Trending hashtags","textPreview":"Trending hashtags","textChars":17,"textLines":1,"bbox":[700,155,490,40]}
+{"kind":"textbox","id":"sh/2h4baxsj","slide":9,"text":"https://www.youtube.com/channel/ucrt_wq1t3mgl2yp8lom_oka/join","textPreview":"https://www.youtube.com/channel/ucrt_wq1t3mgl2yp8lom_oka/join","textChars":61,"textLines":1,"bbox":[70,220,470,30]}
+{"kind":"textbox","id":"sh/hgvu1sby","slide":9,"text":"7 mentions","textPreview":"7 mentions","textChars":10,"textLines":1,"bbox":[550,220,100,26]}
+{"kind":"textbox","id":"sh/gfmt8nad","slide":9,"text":"https://www.malaysiakini.com/news/783041","textPreview":"https://www.malaysiakini.com/news/783041","textChars":40,"textLines":1,"bbox":[70,282,470,30]}
+{"kind":"textbox","id":"sh/ytw7ehor","slide":9,"text":"3 mentions","textPreview":"3 mentions","textChars":10,"textLines":1,"bbox":[550,282,100,26]}
+{"kind":"textbox","id":"sh/zuponm5c","slide":9,"text":"https://www.sinarharian.com.my/article/793885/berita/politik/…","textPreview":"https://www.sinarharian.com.my/article/793885/berita/politik/…","textChars":62,"textLines":1,"bbox":[70,344,470,30]}
+{"kind":"textbox","id":"sh/kvypgr6h","slide":9,"text":"3 mentions","textPreview":"3 mentions","textChars":10,"textLines":1,"bbox":[550,344,100,26]}
+{"kind":"textbox","id":"sh/lw76pcn2","slide":9,"text":"https://www.freemalaysiatoday.com/category/nation/sabahsarawa…","textPreview":"https://www.freemalaysiatoday.com/category/nation/sabahsarawa…","textChars":62,"textLines":1,"bbox":[70,406,470,30]}
+{"kind":"textbox","id":"sh/a5wnaxof","slide":9,"text":"2 mentions","textPreview":"2 mentions","textChars":10,"textLines":1,"bbox":[550,406,100,26]}
+{"kind":"textbox","id":"sh/b65oj250","slide":9,"text":"https://youtu.be/6xiqzbti4ic","textPreview":"https://youtu.be/6xiqzbti4ic","textChars":28,"textLines":1,"bbox":[70,468,470,30]}
+{"kind":"textbox","id":"sh/c7epc76l","slide":9,"text":"2 mentions","textPreview":"2 mentions","textChars":10,"textLines":1,"bbox":[550,468,100,26]}
+{"kind":"textbox","id":"sh/x8n6lcn6","slide":9,"text":"https://open.spotify.com/show/7vb18tu","textPreview":"https://open.spotify.com/show/7vb18tu","textChars":37,"textLines":1,"bbox":[70,530,470,30]}
+{"kind":"textbox","id":"sh/21cn6xoj","slide":9,"text":"2 mentions","textPreview":"2 mentions","textChars":10,"textLines":1,"bbox":[550,530,100,26]}
+{"kind":"textbox","id":"sh/n2lof254","slide":9,"text":"#umno","textPreview":"#umno","textChars":5,"textLines":1,"bbox":[700,220,310,28]}
+{"kind":"textbox","id":"sh/ruhcruhk","slide":9,"text":"107  •  1.4M reach","textPreview":"107  •  1.4M reach","textChars":18,"textLines":1,"bbox":[1020,220,170,26]}
+{"kind":"textbox","id":"sh/6t8vyp0z","slide":9,"text":"#pas","textPreview":"#pas","textChars":4,"textLines":1,"bbox":[700,268,310,28]}
+{"kind":"textbox","id":"sh/twzut4zq","slide":9,"text":"47  •  244.5K reach","textPreview":"47  •  244.5K reach","textChars":19,"textLines":1,"bbox":[1020,268,170,26]}
+{"kind":"textbox","id":"sh/svqd0zi5","slide":9,"text":"#malaysia","textPreview":"#malaysia","textChars":9,"textLines":1,"bbox":[700,316,310,28]}
+{"kind":"textbox","id":"sh/fy1cvehg","slide":9,"text":"35  •  23.8K reach","textPreview":"35  •  23.8K reach","textChars":18,"textLines":1,"bbox":[1020,316,170,26]}
+{"kind":"textbox","id":"sh/ex8v290b","slide":9,"text":"#politikmalaysia","textPreview":"#politikmalaysia","textChars":16,"textLines":1,"bbox":[700,364,310,28]}
+{"kind":"textbox","id":"sh/10juxozm","slide":9,"text":"31  •  638.2K reach","textPreview":"31  •  638.2K reach","textChars":19,"textLines":1,"bbox":[1020,364,170,26]}
+{"kind":"textbox","id":"sh/gzad4ji1","slide":9,"text":"#fyp","textPreview":"#fyp","textChars":4,"textLines":1,"bbox":[700,412,310,28]}
+{"kind":"textbox","id":"sh/v2xcjahc","slide":9,"text":"23  •  298K reach","textPreview":"23  •  298K reach","textChars":17,"textLines":1,"bbox":[1020,412,170,26]}
+{"kind":"textbox","id":"sh/u1obq50r","slide":9,"text":"#politik","textPreview":"#politik","textChars":8,"textLines":1,"bbox":[700,460,310,28]}
+{"kind":"textbox","id":"sh/07m90byp","slide":9,"text":"20  •  204.8K reach","textPreview":"20  •  204.8K reach","textChars":19,"textLines":1,"bbox":[1020,460,170,26]}
+{"kind":"textbox","id":"sh/l8vatgfa","slide":9,"text":"#tabunghaji","textPreview":"#tabunghaji","textChars":11,"textLines":1,"bbox":[700,508,310,28]}
+{"kind":"textbox","id":"sh/y5kry1gj","slide":9,"text":"18  •  293.8K reach","textPreview":"18  •  293.8K reach","textChars":19,"textLines":1,"bbox":[1020,508,170,26]}
+{"kind":"textbox","id":"sh/z6tsr6x4","slide":9,"text":"#anwaribrahim","textPreview":"#anwaribrahim","textChars":13,"textLines":1,"bbox":[700,556,310,28]}
+{"kind":"textbox","id":"sh/c329wbyd","slide":9,"text":"17  •  161.6K reach","textPreview":"17  •  161.6K reach","textChars":19,"textLines":1,"bbox":[1020,556,170,26]}
+{"kind":"shape","id":"sh/d4bapgfy","slide":9,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/qhkru1gn","slide":9,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/b2t8n6x8","slide":9,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"notes","id":"nt/g7xx1c","slide":9,"text":""}
+{"kind":"slide","id":"sl/w4onw0","slide":10,"title":"METHODOLOGY","textShapes":15}
+{"kind":"shape","id":"sh/5cfit8fe","slide":10,"bbox":[0,0,1280,116]}
+{"kind":"textbox","id":"sh/i9ozitwn","slide":10,"text":"METHODOLOGY","textPreview":"METHODOLOGY","textChars":11,"textLines":1,"bbox":[64,22,820,22]}
+{"kind":"textbox","id":"sh/3ax0ryx8","slide":10,"name":"slide-10-title","text":"Read the findings within the limits of the available data","textPreview":"Read the findings within the limits of the available data","textChars":57,"textLines":1,"bbox":[64,49,1080,50]}
+{"kind":"textbox","id":"sh/g7mhgjex","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,55,54,28]}
+{"kind":"textbox","id":"sh/h8fipofi","slide":10,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[90,170,48,40]}
+{"kind":"textbox","id":"sh/u54zetwr","slide":10,"text":"Metrics are generated from a live monitoring snapshot for the selected project and reporting period.","textPreview":"Metrics are generated from a live monitoring snapshot for the selected project and reporting period.","textChars":100,"textLines":1,"bbox":[165,170,980,70]}
+{"kind":"textbox","id":"sh/v6d0nyxc","slide":10,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[90,262,48,40]}
+{"kind":"textbox","id":"sh/83mhcjel","slide":10,"text":"Reach represents potential exposure and should not be interpreted as a unique-audience count.","textPreview":"Reach represents potential exposure and should not be interpreted as a unique-audience count.","textChars":93,"textLines":1,"bbox":[165,262,980,70]}
+{"kind":"textbox","id":"sh/t4vilof6","slide":10,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[90,354,48,40]}
+{"kind":"textbox","id":"sh/58fedcjq","slide":10,"text":"Individual mentions do not include per-post reach, likes, comments or shares; featured coverage is representative, not performance-ranked.","textPreview":"Individual mentions do not include per-post reach, likes, comments or shares; featured coverage is representative, not performance-ranked.","textChars":138,"textLines":1,"bbox":[165,354,980,70]}
+{"kind":"textbox","id":"sh/476d4725","slide":10,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[90,446,48,40]}
+{"kind":"textbox","id":"sh/36dwbm1k","slide":10,"text":"Facebook, Instagram and X may restrict post text or source links in API responses.","textPreview":"Facebook, Instagram and X may restrict post text or source links in API responses.","textChars":82,"textLines":1,"bbox":[165,446,980,70]}
+{"kind":"textbox","id":"sh/i54v2hkz","slide":10,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[90,538,48,40]}
+{"kind":"textbox","id":"sh/h4ve9cje","slide":10,"text":"All mention pages returned by the monitoring service for this period were included.","textPreview":"All mention pages returned by the monitoring service for this period were included.","textChars":83,"textLines":1,"bbox":[165,538,980,70]}
+{"kind":"shape","id":"sh/w3md0729","slide":10,"bbox":[64,682,1152,0]}
+{"kind":"textbox","id":"sh/v2dw721o","slide":10,"text":"PoliticsTest  •  2026-08-27 – 2026-09-02","textPreview":"PoliticsTest  •  2026-08-27 – 2026-09-02","textChars":40,"textLines":1,"bbox":[64,690,850,20]}
+{"kind":"textbox","id":"sh/u14vyxk3","slide":10,"text":"Zestar Media Intelligence","textPreview":"Zestar Media Intelligence","textChars":25,"textLines":1,"bbox":[930,690,286,20]}
+{"kind":"notes","id":"nt/w4onw0","slide":10,"text":""}
